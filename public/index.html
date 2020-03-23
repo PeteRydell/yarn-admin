@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/preview.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
+</head>
+<body>
+
+
+<div class="ui sticky inverted fixed menu">
+    <div class="header item">
+        Yarn
+    </div>
+    <div class="item">
+        Channel
+    </div>
+    <div class="item">
+        Story
+    </div>
+    <div class="item">
+        Tags
+    </div>
+    <div class="item">
+        Languages
+    </div>
+    <div class="item">
+        Custom Ad
+    </div>
+    <div class="item">
+        Tools
+    </div>
+    <div class="item">
+        Drip Campaigns
+    </div>
+    <div class="item">
+        Gem Management
+    </div>
+</div>
+
+<div class="ui sidebar left vertical inverted sidebar labeled menu">
+    <a class="item" style="margin-top: 35px">
+        <i class="user outline icon"></i>
+        People
+    </a>
+    <a class="item">
+        <i class="server icon"></i>
+        Episode List
+    </a>
+    <a class="item">
+        <i class="mobile alternate icon"></i>
+        Episodes
+    </a>
+    <a class="item">
+        <i class="smile icon"></i>
+        Reviews
+    </a>
+    <a class="item">
+        <i class="microphone icon"></i>
+        Translations
+    </a>
+    <a class="item">
+        <i class="bug icon"></i>
+        Debug
+    </a>
+</div>
+
+
+
+<div class="pusher">
+    <div class="ui stackable grid">    
+        <div class="one wide column">
+            <div>
+                <button class="ui vertical animated button toggle button" style="margin-top: 75px">
+                    <div class="hidden content">Menu</div>
+                    <div class="visible content">
+                        <i class="list icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="eight wide column">
+            <div class="ui card" style="width: 100%; margin-top: 75px">
+                <div class="content">
+                    <div class="header">+ Add an Episode</div>
+                </div>
+                <div class="content">
+                    <div class="ui small feed">
+                        <div class="event">
+                            <div class= "content">
+                                <h4 class="ui sub header">Story Title</h4>
+                                <select class="ui search dropdown" id="search-select">
+                                  <option value="">Chat Story</option>
+                              </select>
+
+                            </div>
+                           
+                        </div>
+                        <div class="event">
+                            <div class="content">
+                                <h4 class="ui sub header">Episode Title</h4>
+                                <div class="ui input" style="width: 100%">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="content">
+                                <h4 class="ui sub header">Episode No.</h4>
+                                <div class="ui input">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="ui radio checkbox">
+                                <input type="checkbox" name="checkbox">
+                                <label>Add this Episode to a Story</label>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="content">
+                                <h4 class="ui sub header">Episode Blurb</h4>
+                                <div class="ui input" style="width: 100%">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="content">
+                                <h4 class="ui sub header">Playlist ID</h4>
+                                <div class="ui input" style="width: 100%">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui radio checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <label>Add Episode for Testing</label>
+                        </div>
+                        <div class="ui horizontal divider"></div>
+                        <div class="ui radio checkbox">
+                            <input type="checkbox" name="checkbox">
+                            <label>Choose Your Own Adventure</label>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="ui accordion field">
+                            <div class="title">
+                                <i class="icon plus"></i>
+                                Add Content - CSV
+                            </div>
+                            <div class="content field">
+                                <label class="transition hidden"></label>
+                                <label for="file" id="csv-btn">Upload CSV</label>
+                                <input type="file" id="file" name="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui horizontal divider"></div>
+                    <div class="content">
+                        <div class="ui accordion field">
+                            <div class="title">
+                                <i class="icon plus"></i>
+                                Add Person
+                            </div>
+                            <div class="content field">
+                                <label class="transition hidden"></label>
+                                <div class="ui input transition hidden" style="width: 100%">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label>Select ChatStory</label>
+                                            <input type="text" placeholder="ChatStory">
+                                        </div>
+                                        <div class="field">
+                                            <label>Title</label>
+                                            <input type="text" placeholder="Title/Name">
+                                        </div>
+                                        <div class="field">
+                                            <label>Message Theme</label>
+                                            <select class="ui search dropdown">
+                                                <option value="">Select Theme</option>
+                                                <option value="Aqua_Haze">Aqua Haze</option>
+                                                <option value="Geyser">Geyser</option>
+                                                <option value="Cadet_Blue">Cadet Blue</option>
+                                                <option value="Bermuda_Gray">Bermuda Gray</option>
+                                                <option value="River_Bed">River Bed</option>
+                                                <option value="Tuna">Tuna</option>
+                                                <option value="Ebony_Clay">Ebony Clay</option>
+                                                <option value="Sulu">Sulu</option>
+                                                <option value="Mantis">Mantis</option>
+                                                <option value="Shamrock">Shamrock</option>
+                                                <option value="Forest_Green">Aqua Haze</option>
+                                                <option value="Apple">Apple</option>
+                                                <option value="Spray">Spray</option>
+                                                <option value="Bright_Turquoise">Bright Turquoise</option>
+                                                <option value="Malibu">Malibu</option>
+                                                <option value="Azure_Radiance">Azure Radiance</option>
+                                                <option value="Blue_Ribbon">Blue Ribbon</option>
+                                                <option value="Mariner">Mariner</option>
+                                                <option value="Peranoa">Peranoa</option>
+                                                <option value="Medium_Purple">Medium Purple</option>
+                                                <option value="Seance">Seance</option>
+                                                <option value="Orchid">Orchid</option>
+                                                <option value="Cerise">Cerise</option>
+                                            </select>
+                                        </div>
+                                        <div class="inline field">
+                                            <label for="alignment">Chat Bubble Alignment:</label>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="alignment">
+                                                    <label>Right</label>
+                                                </div>
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="alignment">
+                                                    <label>Left</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inline field">
+                                            <label for="status">Status:</label>
+                                            <div class="field">
+                                                <div class="ui radio checkbox">
+                                                    <input type="radio" name="status">
+                                                    <label>Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <button class="ui primary button">
+                                        Save
+                                    </button>
+                                    <button class="ui button">
+                                        Cancel
+                                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui horizontal divider"></div>
+                    <div class="content">
+                        <div class="ui accordion field">
+                            <div class="title">
+                                <i class="icon plus"></i>
+                                Add Media
+                            </div>
+                            <div class="content field">
+                                <label class="transition hidden"></label>
+                                <div class="ui input transition hidden" style="width: 100%">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui horizontal divider"></div>
+                    <div class="content">
+                        <div class="ui accordion field">
+                            <div class="title">
+                                <i class="icon plus"></i>
+                                Schedule
+                            </div>
+                            <div class="ui calendar" id="calendar">
+                                <label class="transition hidden"></label>
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Date/Time" id="date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui horizontal divider"></div>
+                    <div class="content">
+                        <div class="header">
+                            <button class="ui green button" id="preview">Preview</button>
+                            <button class="ui red button" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one wide column"></div>
+        <div class="four wide column">
+            <h2 style="margin-top: 75px">Episode Preview</h2>
+            <select class="ui search dropdown" id="preview-device">
+                <option value="">Phone Type</option>
+                <option value="iPhone X">iPhone X</option>
+                <option value="iPhone 8">iPhone 8</option>
+                <option value="Google Pixel 2">Google Pixel 2</option>
+                <option value="Samsung Galaxy S8">Samsung Galaxy S8</option>
+            </select>
+            <div class="ui card" id="preview-texts">
+                <p>Upload a file and click "Preview Episode"</p>
+            </div>
+        </div>
+        <div class="two wide column"></div>
+    </div>
+</div>
+<div>
+    <!-- Pop-up for missing characters -->
+<div class="ui modal">
+    <div class="header">Missing characters</div>
+    <div class="content">
+        <div id="missing-char"></div>
+    </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+<script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+<script type="text/javascript" src="./assets/js/preview.js"></script>
+
+<script>
+$('#calendar').calendar();
+$('#search-select').dropdown();
+$('.ui.accordion')
+  .accordion()
+;
+$('.ui.sidebar.left').first()
+  .sidebar('attach events', '.toggle.button')
+;
+$('.toggle.button')
+  .removeClass('disabled')
+
+$("#submit").click(function() { 
+    var value = $('#date').val(); 
+    localStorage.setItem('#date');
+});
+
+</script>
+
+</body>
+</html>
